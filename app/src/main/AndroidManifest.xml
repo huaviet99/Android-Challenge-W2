@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ceslab.android_challenge_w2">
+    package="com.ceslab.androidchallengew2">
 
     <application
         android:allowBackup="true"
@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BoardingActivity"/>
+        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".SignInActivity"/>
     </application>
 
 </manifest>

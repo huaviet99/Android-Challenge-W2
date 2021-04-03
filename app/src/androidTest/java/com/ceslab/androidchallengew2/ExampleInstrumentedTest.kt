@@ -1,4 +1,4 @@
-package com.ceslab.android_challenge_w2
+package com.ceslab.androidchallengew2
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
