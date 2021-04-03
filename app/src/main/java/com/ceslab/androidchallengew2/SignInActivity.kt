@@ -1,4 +1,4 @@
-package com.ceslab.androidchallengew1
+package com.ceslab.androidchallengew2
 
 import android.content.Intent
 import android.os.Bundle
