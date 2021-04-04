@@ -9,8 +9,8 @@ import android.view.WindowManager
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import com.ceslab.androidchallengew1.model.User
 import com.ceslab.androidchallengew2.R
+import com.ceslab.androidchallengew2.model.User
 
 class ProfileActivity : AppCompatActivity() {
     private val TAG = "ProfileActivity"
@@ -18,7 +18,6 @@ class ProfileActivity : AppCompatActivity() {
     lateinit var tvEmail: TextView
     lateinit var tvPhoneNumber: TextView
     lateinit var edEditInput: EditText
-    var user: User = User()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(
@@ -27,20 +26,31 @@ class ProfileActivity : AppCompatActivity() {
         )
         setContentView(R.layout.activity_profile)
         findViewById()
-        initInfo()
+        onGetUser()
         editInfo()
     }
 
+    private fun onGetUser() {
+        Log.d(TAG, "onGetUser: ")
+        val bundle = intent.extras
+        bundle?.let {
+            val user = bundle.getParcelable<User>("USER")
+            initInfo(user)
+        }
+    }
+
     private fun findViewById() {
+        Log.d(TAG, "findViewById: ")
         tvFullName = findViewById<TextView>(R.id.tv_full_name)
         tvEmail = findViewById<TextView>(R.id.tv_email)
         tvPhoneNumber = findViewById<TextView>(R.id.tv_phone_number)
     }
 
-    private fun initInfo() {
-        tvFullName.text = user.fullName
-        tvEmail.text = user.email
-        tvPhoneNumber.text = user.phoneNumber
+    private fun initInfo(user: User?) {
+        Log.d(TAG, "initInfo: ")
+        tvFullName.text = user?.fullName
+        tvEmail.text = user?.email
+        tvPhoneNumber.text = user?.phoneNumber
     }
 
     private fun onInputAlerDiaLog(
@@ -71,6 +81,7 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun editInfo() {
+        Log.d(TAG, "editInfo: ")
         tvFullName.setOnClickListener {
             onInputAlerDiaLog(
                 "Edit Full Name",

@@ -6,8 +6,8 @@ import android.view.WindowManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.ceslab.androidchallengew1.model.User
 import com.ceslab.androidchallengew2.R
+import com.ceslab.androidchallengew2.model.User
 import com.google.android.material.button.MaterialButton
 
 class SignInActivity : AppCompatActivity() {
@@ -21,7 +21,10 @@ class SignInActivity : AppCompatActivity() {
         val btnSignIn = findViewById<MaterialButton>(R.id.btn_sign_in)
         btnSignIn.setOnClickListener {
             if (edtEmail.text.toString().trim() == user.email && edtPassword.text.toString().trim() == user.password) {
+                var bundle:Bundle = Bundle();
+                bundle.putParcelable("USER",user)
                 val intent = Intent(this, ProfileActivity::class.java)
+                intent.putExtras(bundle)
                 startActivity(intent)
             } else {
                 Toast.makeText(this@SignInActivity, "Sign in fail", Toast.LENGTH_SHORT).show()
