@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_profile"
     tools:context=".activity.ProfileActivity">
+
     <ImageButton
         android:id="@+id/btn_skip"
         android:layout_width="wrap_content"
@@ -19,6 +20,7 @@
         android:src="@drawable/ic_arrow_back_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="wrap_content"
@@ -77,27 +79,37 @@
         android:fontFamily="@font/sofia_pro_regular"
         android:text="Full name"
         android:textSize="@dimen/size_16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+        app:layout_constraintStart_toStartOf="@+id/cardview_fullname"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/tv_full_name"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_fullname"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginHorizontal="18dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/border_outline_textview"
-        android:fontFamily="@font/sofia_pro_medium"
-        android:gravity="center_vertical"
-        android:hint="Your full name"
-        android:padding="16dp"
-        android:text="Hua vi van "
-        android:textColor="@color/black"
-        android:textSize="@dimen/size_17sp"
+        app:cardCornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_full_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_full_name"
+        app:strokeColor="#EEEEEE"
+        app:strokeWidth="3dp">
 
+        <TextView
+            android:id="@+id/tv_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:elevation="-100dp"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:gravity="center_vertical"
+            android:hint="Your full name"
+            android:padding="16dp"
+            android:text="Hua vi van "
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_17sp"
+
+            />
+    </androidx.cardview.widget.CardView>
 
 
     <TextView
@@ -108,28 +120,35 @@
         android:fontFamily="@font/sofia_pro_regular"
         android:text="E-mail"
         android:textSize="@dimen/size_16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_email"
-        app:layout_constraintTop_toBottomOf="@+id/tv_full_name" />
+        app:layout_constraintStart_toStartOf="@+id/cardview_email"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_fullname" />
 
-    <TextView
-        android:id="@+id/tv_email"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_email"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginHorizontal="18dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/border_outline_textview"
-        android:fontFamily="@font/sofia_pro_medium"
-        android:gravity="center_vertical"
-        android:hint="Your email"
         android:padding="16dp"
-        android:text="ronaldo@gmail.com"
-        android:textColor="@color/black"
-        android:textSize="@dimen/size_17sp"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_email"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_email">
 
-        />
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:gravity="center_vertical"
+            android:hint="Your email"
+            android:padding="16dp"
+            android:text="ronaldo@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_17sp"
 
+
+            />
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/tv_title_phone_number"
@@ -139,25 +158,32 @@
         android:fontFamily="@font/sofia_pro_regular"
         android:text="Phone number"
         android:textSize="@dimen/size_16sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_phone_number"
-        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+        app:layout_constraintStart_toStartOf="@+id/cardview_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_email" />
 
-    <TextView
-        android:id="@+id/tv_phone_number"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_phone_number"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginHorizontal="18dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/border_outline_textview"
-        android:fontFamily="@font/sofia_pro_medium"
-        android:gravity="center_vertical"
-        android:hint="Your phone number"
+        android:outlineSpotShadowColor="@android:color/transparent"
         android:padding="16dp"
-        android:text="09090909"
-        android:textColor="@color/black"
-        android:textSize="@dimen/size_17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_phone_number" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_phone_number">
 
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/border_outline_cardview"
+            android:fontFamily="@font/sofia_pro_medium"
+            android:gravity="center_vertical"
+            android:hint="Your phone number"
+            android:padding="16dp"
+            android:text="09090909"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_17sp" />
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
