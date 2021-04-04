@@ -1,4 +1,4 @@
-package com.ceslab.androidchallengew2
+package com.ceslab.androidchallengew2.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,10 +13,7 @@ import com.google.android.material.button.MaterialButton
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_sign_in)
         val user: User = User()
         var edEmail = findViewById<EditText>(R.id.ed_email)

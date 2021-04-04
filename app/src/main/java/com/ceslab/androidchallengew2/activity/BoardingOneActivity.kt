@@ -1,26 +1,28 @@
-package com.ceslab.androidchallengew2
+package com.ceslab.androidchallengew2.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.button.MaterialButton
+import com.ceslab.androidchallengew2.R
 
 /**
  * Created by Viet Hua on 04/03/2021.
  */
 
-class SignUpActivity: AppCompatActivity(){
+class BoardingOneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        setContentView(R.layout.activity_sign_up)
+        setContentView(R.layout.activity_onboarding_one)
 
-
-        val btnSignup = findViewById<MaterialButton>(R.id.btn_sign_up)
-        btnSignup.setOnClickListener {
-            val intent = Intent(this,SignInActivity::class.java)
+        val btnNext = findViewById<ImageButton>(R.id.btn_next)
+        btnNext.setOnClickListener {
+            val intent = Intent(this,
+                BoardingTwoActivity::class.java)
             startActivity(intent)
         }
     }
+
 }

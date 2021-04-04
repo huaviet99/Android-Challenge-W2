@@ -1,16 +1,14 @@
-package com.ceslab.androidchallengew2
+package com.ceslab.androidchallengew2.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.util.Log
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.view.marginStart
 import com.ceslab.androidchallengew1.model.User
+import com.ceslab.androidchallengew2.R
 
 class ProfileActivity : AppCompatActivity() {
     private val TAG = "ProfileActivity"

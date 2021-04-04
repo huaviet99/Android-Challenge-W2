@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/img_boarding_one"
+        android:id="@+id/img_boarding_three"
         android:layout_width="310dp"
         android:layout_height="325dp"
         android:layout_marginTop="@dimen/distance_72dp"
@@ -14,17 +14,17 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_boarding_one" />
+        app:srcCompat="@drawable/image_boarding_three" />
 
     <ImageView
-        android:id="@+id/img_dot_one"
+        android:id="@+id/img_dot_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/distance_30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_boarding_one"
-        app:srcCompat="@drawable/image_dot_one" />
+        app:layout_constraintTop_toBottomOf="@+id/img_boarding_three"
+        app:srcCompat="@drawable/image_dot_three" />
 
     <TextView
         android:id="@+id/tv_board_title"
@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_dot_one" />
+        app:layout_constraintTop_toBottomOf="@+id/img_dot_three" />
 
     <TextView
         android:fontFamily="@font/sofia_pro_regular"
