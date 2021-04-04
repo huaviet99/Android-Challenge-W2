@@ -13,11 +13,12 @@ import com.ceslab.androidchallengew2.R
 import com.ceslab.androidchallengew2.model.User
 
 class ProfileActivity : AppCompatActivity() {
-    private val TAG = "ProfileActivity"
-    lateinit var tvFullName: TextView
-    lateinit var tvEmail: TextView
-    lateinit var tvPhoneNumber: TextView
-    lateinit var edEditInput: EditText
+    private lateinit var tvUserName: TextView
+    private lateinit var tvFullName: TextView
+    private lateinit var tvEmail: TextView
+    private lateinit var tvPhoneNumber: TextView
+    private lateinit var edtData: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(
@@ -25,88 +26,64 @@ class ProfileActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         setContentView(R.layout.activity_profile)
-        findViewById()
-        onGetUser()
+        findViewsById()
+        getUserFromBundle()
         editInfo()
     }
 
-    private fun onGetUser() {
-        Log.d(TAG, "onGetUser: ")
+    private fun getUserFromBundle() {
         val bundle = intent.extras
         bundle?.let {
-            val user = bundle.getParcelable<User>("USER")
+            val user = bundle.getParcelable<User>(SignInActivity.USER_KEY)
             initInfo(user)
         }
     }
 
-    private fun findViewById() {
-        Log.d(TAG, "findViewById: ")
-        tvFullName = findViewById<TextView>(R.id.tv_full_name)
-        tvEmail = findViewById<TextView>(R.id.tv_email)
-        tvPhoneNumber = findViewById<TextView>(R.id.tv_phone_number)
+    private fun findViewsById() {
+        tvUserName = findViewById(R.id.tv_user_name)
+        tvFullName = findViewById(R.id.tv_full_name)
+        tvEmail = findViewById(R.id.tv_email)
+        tvPhoneNumber = findViewById(R.id.tv_phone_number)
     }
 
     private fun initInfo(user: User?) {
-        Log.d(TAG, "initInfo: ")
+        tvUserName.text = user?.fullName
         tvFullName.text = user?.fullName
         tvEmail.text = user?.email
         tvPhoneNumber.text = user?.phoneNumber
     }
 
-    private fun onInputAlerDiaLog(
-        title: String,
-        textHint: String,
-        textView: TextView
-    ) {
-        Log.d(TAG, "onInputAlerDiaLog: ")
+    private fun setupAlertDialog(title: String, textHint: String, textView: TextView) {
         val view: View = LayoutInflater
             .from(this)
-            .inflate(R.layout.layout_input_alerdialog, null, false)
-        edEditInput = view.findViewById(R.id.ed_input)
-        edEditInput.setText(textView.text)
-        edEditInput.setHint(textHint)
+            .inflate(R.layout.dialog_edit_info, null, false)
+        edtData = view.findViewById(R.id.edt_base)
+        edtData.setText(textView.text)
+        edtData.hint = textHint
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setView(view)
             .setTitle(title)
-            .setPositiveButton("OK") { dialog, which ->
-                Log.d(TAG, "onInputAlerDiaLog: " + edEditInput.text)
-                textView.text = edEditInput.text
+            .setPositiveButton("OK") { dialog, _ ->
+                textView.text = edtData.text
                 dialog.dismiss()
             }
-            .setNegativeButton("CANCEL") { dialog, which ->
-                Log.d(TAG, "onInputAlerDiaLog:CANCEL ")
+            .setNegativeButton("CANCEL") { dialog, _ ->
                 dialog.dismiss()
             }.show()
 
     }
 
     private fun editInfo() {
-        Log.d(TAG, "editInfo: ")
         tvFullName.setOnClickListener {
-            onInputAlerDiaLog(
-                "Edit Full Name",
-                "Enter your full name",
-                tvFullName
-            )
+            setupAlertDialog("Edit Full Name", "Enter your full name", tvFullName)
         }
-
-        // Edit email
 
         tvEmail.setOnClickListener {
-            onInputAlerDiaLog(
-                "Edit E-mail ",
-                "Enter your e-mail",
-                tvEmail
-            )
+            setupAlertDialog("Edit E-mail ", "Enter your e-mail", tvEmail)
         }
 
-        // Edit Phone number
         tvPhoneNumber.setOnClickListener {
-            onInputAlerDiaLog(
-                "Edit Phone Number ",
-                "Enter your phone number",
-                tvPhoneNumber
-            )
+            setupAlertDialog("Edit Phone Number ", "Enter your phone number", tvPhoneNumber)
         }
     }
 }
