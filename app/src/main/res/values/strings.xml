@@ -16,6 +16,12 @@
     <string name="activity_on_boarding_one_title">Browse your menu\nand order directly</string>
     <string name="activity_on_boarding_one_message">Our app can send you everywhere, even\nspace. For only $2.99 per month</string>
 
+    <string name="activity_on_boarding_two_title">Even to space with\nus! Together</string>
+    <string name="activity_on_boarding_two_message">Our app can send you everywhere, even\nspace. For only $2.99 per month</string>
+
+    <string name="activity_on_boarding_three_title">Pickup delivery at\nyour door</string>
+    <string name="activity_on_boarding_three_message">Our app can send you everywhere, even\nspace. For only $2.99 per month</string>
+
     <string name="activity_sign_up_title">Sign Up</string>
     <string name="activity_sign_up_full_name">Full name</string>
     <string name="activity_sign_up_email">E-mail</string>
@@ -37,21 +43,7 @@
     <string name="activity_sign_in_sign_up">Sign Up</string>
     <string name="activity_sign_in_sign_in_with">Sign in with</string>
 
-    <string name="activity_verification_title">Verification Code</string>
-    <string name="activity_verification_space">&#160;&#160;&#160;&#160;&#160;</string>
 
-    <string name="activity_verification_message">Please type the verification code sent to\nprelookstudio@gmail.com</string>
-    <string name="activity_verification_dont_receive_code">I don\'t receive a code!</string>
-    <string name="activity_verification_please_resend">Please resend</string>
-    <string name="activity_verification_one_button">1</string>
-    <string name="activity_verification_two_button">2\nABC</string>
-    <string name="activity_verification_three_button">3\nDEF</string>
-    <string name="activity_verification_four_button">4\nGHI</string>
-    <string name="activity_verification_five_button">5\nJKL</string>
-    <string name="activity_verification_six_button">6\nMNO</string>
-    <string name="activity_verification_seven_button">7\nPQRS</string>
-    <string name="activity_verification_eight_button">8\nTUV</string>
-    <string name="activity_verification_nine_button">9\nWXYZ</string>
-    <string name="activity_verification_zero_button">0</string>
+
 
 </resources>
