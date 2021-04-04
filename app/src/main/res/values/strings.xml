@@ -16,6 +16,12 @@
     <string name="activity_on_boarding_one_title">Browse your menu\nand order directly</string>
     <string name="activity_on_boarding_one_message">Our app can send you everywhere, even\nspace. For only $2.99 per month</string>
 
+    <string name="activity_on_boarding_two_title">Even to space with\nus! Together</string>
+    <string name="activity_on_boarding_two_message">Our app can send you everywhere, even\nspace. For only $2.99 per month</string>
+
+    <string name="activity_on_boarding_three_title">Pickup delivery at\nyour door</string>
+    <string name="activity_on_boarding_three_message">Our app can send you everywhere, even\nspace. For only $2.99 per month</string>
+
     <string name="activity_sign_up_title">Sign Up</string>
     <string name="activity_sign_up_full_name">Full name</string>
     <string name="activity_sign_up_email">E-mail</string>

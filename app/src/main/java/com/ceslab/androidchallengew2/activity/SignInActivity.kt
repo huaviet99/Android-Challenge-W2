@@ -16,11 +16,11 @@ class SignInActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_sign_in)
         val user: User = User()
-        var edEmail = findViewById<EditText>(R.id.ed_email)
-        var edPassword = findViewById<EditText>(R.id.ed_password)
-        val btnSignin = findViewById<MaterialButton>(R.id.btn_sign_in)
-        btnSignin.setOnClickListener {
-            if (edEmail.text.toString().trim().equals(user.email) && edPassword.text.toString().trim().equals(user.password)) {
+        var edtEmail = findViewById<EditText>(R.id.edt_email)
+        var edtPassword = findViewById<EditText>(R.id.edt_password)
+        val btnSignIn = findViewById<MaterialButton>(R.id.btn_sign_in)
+        btnSignIn.setOnClickListener {
+            if (edtEmail.text.toString().trim() == user.email && edtPassword.text.toString().trim() == user.password) {
                 val intent = Intent(this, ProfileActivity::class.java)
                 startActivity(intent)
             } else {

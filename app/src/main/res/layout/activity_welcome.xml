@@ -88,6 +88,8 @@
         android:layout_marginBottom="@dimen/distance_20dp"
         android:fontFamily="@font/sofia_pro_medium"
         android:lines="2"
+        android:focusable="true"
+        android:clickable="true"
         android:text="@string/activity_welcome_sign_in_underline"
         android:textColor="@color/white"
         android:textSize="@dimen/size_14sp"

@@ -4,9 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroud_profile"
+    android:background="@drawable/background_profile"
     tools:context=".activity.ProfileActivity">
-
+    <ImageButton
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/white"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="12dp"
+        android:src="@drawable/ic_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="wrap_content"
@@ -27,7 +39,7 @@
             android:layout_width="27dp"
             android:layout_height="34dp"
             android:layout_gravity="bottom|end"
-            android:layout_marginRight="14dp"
+            android:layout_marginEnd="14dp"
             android:backgroundTint="@color/white"
             android:gravity="center"
             android:src="@drawable/icon_camera" />
@@ -49,7 +61,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:fontFamily="@font/sofia_pro_regular"
         android:text="Edit Profile"
         android:textSize="14sp"
@@ -62,12 +73,11 @@
         android:id="@+id/tv_title_full_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
         android:layout_marginTop="49dp"
         android:fontFamily="@font/sofia_pro_regular"
         android:text="Full name"
         android:textSize="@dimen/size_16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_full_name"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
@@ -81,7 +91,7 @@
         android:gravity="center_vertical"
         android:hint="Your full name"
         android:padding="16dp"
-        android:text="HUa vi van "
+        android:text="Hua vi van "
         android:textColor="@color/black"
         android:textSize="@dimen/size_17sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,16 +99,16 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title_full_name" />
 
 
+
     <TextView
         android:id="@+id/tv_title_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
         android:layout_marginTop="29dp"
         android:fontFamily="@font/sofia_pro_regular"
         android:text="E-mail"
         android:textSize="@dimen/size_16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_email"
         app:layout_constraintTop_toBottomOf="@+id/tv_full_name" />
 
     <TextView
@@ -125,12 +135,11 @@
         android:id="@+id/tv_title_phone_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
         android:layout_marginTop="29dp"
         android:fontFamily="@font/sofia_pro_regular"
         android:text="Phone number"
         android:textSize="@dimen/size_16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_phone_number"
         app:layout_constraintTop_toBottomOf="@+id/tv_email" />
 
     <TextView

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_signin"
+    android:background="@drawable/background_sign_in"
     android:padding="@dimen/distance_20dp">
 
     <TextView
@@ -41,8 +41,8 @@
         android:text="@string/activity_sign_up_email"
         android:textColor="@color/manatee"
         android:textSize="@dimen/size_16sp"
-        app:layout_constraintStart_toStartOf="@+id/edt_email"
-        app:layout_constraintTop_toBottomOf="@+id/edt_full_name" />
+        app:layout_constraintStart_toStartOf="@+id/til_email"
+        app:layout_constraintTop_toBottomOf="@+id/til_full_name" />
 
     <TextView
         android:id="@+id/tv_password"
@@ -53,11 +53,11 @@
         android:text="@string/activity_sign_up_password"
         android:textColor="@color/manatee"
         android:textSize="@dimen/size_16sp"
-        app:layout_constraintStart_toStartOf="@+id/edt_password"
-        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+        app:layout_constraintStart_toStartOf="@+id/til_password"
+        app:layout_constraintTop_toBottomOf="@+id/til_email" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_full_name"
+        android:id="@+id/til_full_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_email"
+        android:id="@+id/til_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_password"
+        android:id="@+id/til_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
         app:backgroundTint="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+        app:layout_constraintTop_toBottomOf="@+id/til_password" />
 
     <TextView
         android:id="@+id/tv_have_account"
@@ -153,11 +153,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
     <TextView
-        android:id="@+id/tv_login"
+        android:id="@+id/btn_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/distance_8dp"
         android:layout_marginTop="@dimen/distance_20dp"
+        android:clickable="true"
+        android:focusable="true"
         android:fontFamily="@font/sofia_pro_medium"
         android:lines="2"
         android:text="@string/activity_sign_up_login"

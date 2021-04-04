@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.ceslab.androidchallengew2.R
-import com.google.android.material.button.MaterialButton
+import android.widget.TextView
 
 /**
  * Created by Viet Hua on 04/03/2021.
@@ -18,8 +18,8 @@ class SignUpActivity: AppCompatActivity(){
         setContentView(R.layout.activity_sign_up)
 
 
-        val btnSignup = findViewById<MaterialButton>(R.id.btn_sign_up)
-        btnSignup.setOnClickListener {
+        val btnSignIn = findViewById<TextView>(R.id.btn_sign_in)
+        btnSignIn.setOnClickListener {
             val intent = Intent(this,
                 SignInActivity::class.java)
             startActivity(intent)
