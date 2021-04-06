@@ -11,8 +11,8 @@
         android:id="@+id/btn_skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="@dimen/distance_24dp"
+        android:layout_marginTop="@dimen/distance_45dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/white"
         android:paddingHorizontal="@dimen/distance_10dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/fl_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="114dp"
@@ -51,21 +51,20 @@
         android:id="@+id/tv_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="235dp"
         android:fontFamily="@font/sofia_pro_semi_bold"
         android:text="Eljad Eendaz"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/fl_avatar" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/btn_edit_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sofia_pro_regular"
-        android:text="Edit Profile"
-        android:textSize="@dimen/size_14sp"
+        android:text="@string/activity_profile_edit_profile"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
@@ -77,10 +76,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="49dp"
         android:fontFamily="@font/sofia_pro_regular"
-        android:text="Full name"
+        android:text="@string/activity_profile_full_name"
         android:textSize="@dimen/size_16sp"
         app:layout_constraintStart_toStartOf="@+id/cv_full_name"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_full_name"
@@ -97,10 +96,9 @@
         <TextView
             android:id="@+id/tv_full_name"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="@dimen/distance_56dp"
             android:fontFamily="@font/sofia_pro_medium"
             android:gravity="center_vertical"
-            android:hint="Your full name"
             android:padding="16dp"
             android:text="Cristiano Ronaldo"
             android:textColor="@color/black"
@@ -116,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
         android:fontFamily="@font/sofia_pro_regular"
-        android:text="E-mail"
+        android:text="@string/activity_profile_email"
         android:textSize="@dimen/size_16sp"
         app:layout_constraintStart_toStartOf="@+id/cv_email"
         app:layout_constraintTop_toBottomOf="@+id/cv_full_name" />
@@ -135,10 +133,9 @@
         <TextView
             android:id="@+id/tv_email"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="@dimen/distance_56dp"
             android:fontFamily="@font/sofia_pro_medium"
             android:gravity="center_vertical"
-            android:hint="Your email"
             android:padding="16dp"
             android:text="ronaldo@gmail.com"
             android:textColor="@color/black"
@@ -154,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
         android:fontFamily="@font/sofia_pro_regular"
-        android:text="Phone number"
+        android:text="@string/activity_profile_phone_number"
         android:textSize="@dimen/size_16sp"
         app:layout_constraintStart_toStartOf="@+id/cv_phone_number"
         app:layout_constraintTop_toBottomOf="@+id/cv_email" />
@@ -174,11 +171,10 @@
         <TextView
             android:id="@+id/tv_phone_number"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="@dimen/distance_56dp"
             android:background="@drawable/border_outline_cardview"
             android:fontFamily="@font/sofia_pro_medium"
             android:gravity="center_vertical"
-            android:hint="Your phone number"
             android:padding="16dp"
             android:text="+1 (783) 0986 8786"
             android:textColor="@color/black"
