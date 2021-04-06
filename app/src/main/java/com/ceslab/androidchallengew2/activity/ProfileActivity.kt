@@ -2,13 +2,14 @@ package com.ceslab.androidchallengew2.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import android.widget.Toast
+
 import com.ceslab.androidchallengew2.R
 import com.ceslab.androidchallengew2.model.User
 
@@ -65,6 +66,7 @@ class ProfileActivity : AppCompatActivity() {
             .setTitle(title)
             .setPositiveButton("OK") { dialog, _ ->
                 textView.text = edtData.text
+                showToastMessage(edtData.text.toString())
                 dialog.dismiss()
             }
             .setNegativeButton("CANCEL") { dialog, _ ->
@@ -85,5 +87,9 @@ class ProfileActivity : AppCompatActivity() {
         tvPhoneNumber.setOnClickListener {
             setupAlertDialog("Edit Phone Number ", "Enter your phone number", tvPhoneNumber)
         }
+    }
+
+    private fun showToastMessage(message:String){
+        Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
     }
 }

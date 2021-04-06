@@ -23,7 +23,6 @@
     <dimen name="distance_16dp">16dp</dimen>
     <dimen name="distance_12dp">10dp</dimen>
     <dimen name="distance_10dp">10dp</dimen>
-    <dimen name="distance_12dp">12dp</dimen>
     <dimen name="distance_8dp">8dp</dimen>
     <dimen name="distance_5dp">5dp</dimen>
     <dimen name="distance_4dp">4dp</dimen>
