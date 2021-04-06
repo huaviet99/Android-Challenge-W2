@@ -7,13 +7,16 @@
 
     <ImageView
         android:id="@+id/img_boarding_two"
-        android:layout_width="352dp"
-        android:layout_height="321dp"
-        android:layout_marginTop="@dimen/distance_72dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="@dimen/distance_45dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/img_dot_two"
         app:srcCompat="@drawable/image_boarding_two" />
 
     <ImageView
